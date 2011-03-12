@@ -1,6 +1,7 @@
 # hoe_highline
 
-* http://bitbucket.org/ged/hoe-highline
+* https://bitbucket.org/ged/hoe-highline
+* https://github.com/ged/hoe-highline
 
 ## Description
 
@@ -24,10 +25,10 @@ and other fun stuff.
 	Hoe.plugin :highline
 
 	Hoe.spec 'mygem' do
-		
+
 		# Configure the highline terminal to your liking
 		highline.wrap_at = :auto  # Auto-wrap output
-		
+
 	end
 
 	# Generate an email, show it, confirm they want to send it, then prompt
@@ -64,12 +65,74 @@ and other fun stuff.
 		end
 	end
 
-There is also a 'demo' task in this library's Rakefile that has a few ideas for things you might want to do.
+There is also a 'demo' task in this library's Rakefile that has a few ideas for things you might want to do. Running it looks like this:
 
+	hoe-highline Demo
+
+	You can prompt for a yes-or-no answer with agree()
+	Know what I mean (nudge, nudge, wink, wink)? [yn] y
+	What's it like?
+
+	You can ask for input with ask()
+	What could be better than that? Nothing!
+	Actually, that was a rhetorical question, but you answered: "Nothing!"
+
+	You can also ask() for things like passwords with a little configuration
+	Super sekrit password: **********
+	Okay, using your 10-character password for something nefarious...
+
+	You can also use choose() for building a menu.
+	What editor do you prefer?
+	1. Emacs
+	2. vi
+	3. Textmate
+	4. pico
+	5. RubyMine
+	6. FreeRIDE
+	?  3
+	Good to know (you picked "Textmate").
+
+	Or build a complex menu using a block.
+	Announce a new release:
+	1. ruby-talk
+	2. Blog
+	3. Twitter
+	4. Exit
+	?  2
+	Posting to blog.you.com!
+	1. ruby-talk
+	2. Twitter
+	3. Exit
+	?  1
+	Sending mail!
+	1. Twitter
+	2. Exit
+	?  2
+
+	There is also a list() function for display stuff in a compact list
+	For example, here's a list of the available tasks:
+	.hg/branch                    ChangeLog
+	check_extra_deps              check_manifest
+	clobber                       clobber_docs
+	commit-msg.txt                config_hoe
+	default                       demo
+	deps:list                     doc
+	gem                           generate_key
+	hg:ci                         hg:commit
+	hg:prep_release               hg:pull
+	hg:push_without_confirmation  hg:update
+	newb                          package
+	pkg/hoe-highline-0.0.1.gem    pkg/hoe-highline-0.0.1.tgz
+	pre                           prerelease
+	rcov                          rcov_overlay
+	release_sanity                release_to
+	ridocs                      
 
 ## Contributing
 
-You can check out the current development source with Mercurial via its [Bitbucket project][bitbucket]. Or if you prefer Git, via [its Github mirror][github].
+You can check out the current development source with Mercurial via its
+[Bitbucket project][bitbucket]. Or if you prefer Git, via 
+[its Github mirror][github].
 
 After checking out the source, run:
 

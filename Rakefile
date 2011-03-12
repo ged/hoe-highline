@@ -30,7 +30,9 @@ hoespec = Hoe.spec 'hoe-highline' do
 
 	self.rdoc_locations << "deveiate:/usr/local/www/public/code/#{remote_rdoc_dir}"
 
-	unless self.respond_to?( :highline )
+	if self.respond_to?( :highline )
+		self.highline.wrap_at = :auto
+	else
 		abort "Ack! The plugin doesn't seem to be loaded; that won't do at all."
 	end
 end
@@ -91,7 +93,7 @@ task :demo do
 	say "\n<%= color 'There is also a list() function for display stuff in a compact " +
 	    "list', :subheader %>"
 	say "For example, here's a list of the available tasks:"
-	say list( Rake.application.tasks.map(&:to_s), :columns_across, 4 )
+	say list( Rake.application.tasks.map(&:to_s), :columns_across )
 
 end
 
