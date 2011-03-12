@@ -18,6 +18,7 @@ hoespec = Hoe.spec 'hoe-highline' do
 
 	self.extra_deps.push *{
 		'highline' => '~> 1.6',
+		'hoe' => '~> 2.8',
 	}
 
 	self.spec_extras[:licenses] = ["BSD"]
