@@ -1,0 +1,9 @@
+== v0.1.0 [2012-03-28] Michael Granger <ged@FaerieMUD.org>
+
+Updated for Hoe 3.
+
+
+== v0.0.1 [2011-01-23] Michael Granger <ged@FaerieMUD.org>
+
+Initial release.
+

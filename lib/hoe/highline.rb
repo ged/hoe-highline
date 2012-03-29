@@ -5,14 +5,11 @@ require 'highline'
 require 'forwardable'
 
 # Add Highline command-line interaction functions to Hoe Rakefiles.
-# 
-# @author Michael Granger <ged@FaerieMUD.org>
-# 
 module Hoe::Highline
 	extend Forwardable
 
 	# Library version constant
-	VERSION = '0.0.1'
+	VERSION = '0.1.0'
 
 	# Version-control revision constant
 	REVISION = %q$Revision$
