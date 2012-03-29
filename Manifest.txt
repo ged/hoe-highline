@@ -1,5 +1,6 @@
 ChangeLog
 History.rdoc
+Manifest.txt
 README.rdoc
 Rakefile
 lib/hoe/highline.rb
