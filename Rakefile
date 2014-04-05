@@ -12,16 +12,16 @@ Hoe.plugins.delete :rubyforge
 
 hoespec = Hoe.spec 'hoe-highline' do
 	self.developer 'Michael Granger', 'ged@FaerieMUD.org'
+	self.license :BSD
 
 	self.readme_file = 'README.rdoc'
 	self.history_file = 'History.rdoc'
 	self.extra_rdoc_files = FileList[ '*.{rdoc,md}' ]
 
 	self.dependency 'highline', '~> 1.6'
-	self.dependency 'hoe', '~> 3.0'
+	self.dependency 'hoe', '~> 3.11'
 
-	self.spec_extras[:licenses] = ["BSD"]
-	self.require_ruby_version( '>=1.8.7' )
+	self.require_ruby_version( '>=2.0.0' )
 
 	self.hg_sign_tags = true if self.respond_to?( :hg_sign_tags= )
 	self.rdoc_locations << "deveiate:/usr/local/www/public/code/#{remote_rdoc_dir}"
@@ -40,9 +40,9 @@ task :demo do
 
 	say "\n<%= color 'You can prompt for a yes-or-no answer with agree()', :subheader %>"
 	if agree "Know what I mean (nudge, nudge, wink, wink)? <%= color '[yn]', :values %> ", true
-		say "What's it like?"
+		say "\nWhat's it like?"
 	else
-		say "Ah, more's the pity."
+		say "\nAh, more's the pity."
 	end
 
 	say "\n<%= color 'You can ask for input with ask()', :subheader %>"

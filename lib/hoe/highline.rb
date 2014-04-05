@@ -34,7 +34,8 @@ module Hoe::Highline
 		HighLine.color_scheme = HighLine::ColorScheme.new( COLOR_SCHEME )
 		@highline = HighLine.new( $stdin, $stderr )
 
-		self.extra_dev_deps << ['hoe-highline', "~> #{VERSION}"] unless
+		minor_version = VERSION[ /^\d+\.\d+/ ]
+		self.extra_dev_deps << ['hoe-highline', "~> #{minor_version}"] unless
 			self.name == 'hoe-highline'
 	end
 
