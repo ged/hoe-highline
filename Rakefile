@@ -12,7 +12,7 @@ Hoe.plugins.delete :rubyforge
 
 hoespec = Hoe.spec 'hoe-highline' do
 	self.developer 'Michael Granger', 'ged@FaerieMUD.org'
-	self.license :BSD
+	self.license 'BSD'
 
 	self.readme_file = 'README.rdoc'
 	self.history_file = 'History.rdoc'
